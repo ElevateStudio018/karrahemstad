@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
-"""Builds the static site into public/.  Usage: python3 src/build.py"""
+"""Builds the static site into public/.  Usage: python3 src/build.py
+
+Preview under a sub path (GitHub Pages): BASE_PATH=/karrahemstad/preview/ OUT_DIR=preview python3 src/build.py
+"""
 import json
+import os
 import shutil
 from datetime import date
 from html import escape as e
@@ -12,7 +16,9 @@ from content import (ABOUT, COMPANY, DOCS, FAQ, FORM_ENDPOINT, GUARANTEES, MOVIN
                      SERVICES, SITE_URL)
 
 SRC = Path(__file__).parent
-OUT = SRC.parent / "public"
+OUT = SRC.parent / os.environ.get("OUT_DIR", "public")
+# Site root on the server. "/" in production; a sub path for previews.
+BASE = os.environ.get("BASE_PATH", "/")
 ASSET_VERSION = date.today().strftime("%Y%m%d")
 BY_SLUG = {s["slug"]: s for s in SERVICES}
 PRIVATE = [s for s in SERVICES if not s["business"]]
@@ -707,6 +713,10 @@ def build_images():
 def write(path, html):
     p = OUT / path.strip("/") / "index.html" if not path.endswith(".html") else OUT / path.strip("/")
     p.parent.mkdir(parents=True, exist_ok=True)
+    if BASE != "/":
+        html = (html.replace('="/', f'="{BASE}').replace("='/", f"='{BASE}")
+                .replace(", /assets/", f", {BASE}assets/")
+                .replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1))
     p.write_text(html, encoding="utf-8")
 
 
@@ -717,6 +727,9 @@ def main():
     build_images()
     for folder in ("css", "js"):
         shutil.copytree(SRC / folder, OUT / "assets" / folder)
+    if BASE != "/":
+        js = OUT / "assets" / "js" / "main.js"
+        js.write_text(js.read_text(encoding="utf-8").replace('"/#offert"', f'"{BASE}#offert"'), encoding="utf-8")
     write("/", home())
     for s in SERVICES:
         write(f"/{s['slug']}/", service_page(s))

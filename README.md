@@ -28,3 +28,12 @@ Sidornas adresser (`/hemstadning/`, `/flyttstadning/` osv.) är desamma som för
 
 Sätt `FORM_ENDPOINT` i `src/content.py` till en formulärtjänst som tar emot JSON (t.ex. Formspree eller Web3Forms) och bygg om.
 Så länge den är tom öppnar formuläret ett färdigifyllt mejl till info@karrahemstad.se.
+
+## Förhandsvisning på GitHub Pages
+
+`preview/` är samma sajt byggd för adressen https://elevatestudio018.github.io/karrahemstad/preview/ (med `noindex`).
+Bygg om den efter ändringar:
+
+```sh
+BASE_PATH=/karrahemstad/preview/ OUT_DIR=preview python3 src/build.py
+```
