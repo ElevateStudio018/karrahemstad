@@ -1,6 +1,6 @@
 # karrahemstad.se
 
-Statisk sajt för Kärra Hemstäd. Ersätter den gamla WordPress-sajten – allt innehåll, priser, bilder och PDF:er är hämtade därifrån.
+Statisk sajt för Kärra Hemstäd (Poppins, navy/cyan, helskärms-hero). Ersätter den gamla WordPress-sajten – allt innehåll, priser, bilder och PDF:er är hämtade därifrån.
 
 ## Struktur
 

@@ -3,19 +3,28 @@
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const fmt = (n) => Math.round(n).toLocaleString("sv-SE").replace(/\s/g, " ") + " kr";
 
-  /* ------------------------------------------------ navigation */
+  /* ------------------------------------------------ header */
+  const siteHeader = $(".site-header");
   const nav = $("#nav");
   const menuBtn = $(".menu-btn");
+  let menuOpen = false;
+  const syncHeader = () => siteHeader.classList.toggle("is-solid", menuOpen || window.scrollY > 40);
+  window.addEventListener("scroll", syncHeader, { passive: true });
+  syncHeader();
+
   menuBtn?.addEventListener("click", () => {
-    const open = menuBtn.getAttribute("aria-expanded") !== "true";
-    menuBtn.setAttribute("aria-expanded", open);
-    nav.classList.toggle("open", open);
-    document.body.style.overflow = open ? "hidden" : "";
+    menuOpen = menuBtn.getAttribute("aria-expanded") !== "true";
+    menuBtn.setAttribute("aria-expanded", menuOpen);
+    nav.classList.toggle("open", menuOpen);
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    syncHeader();
   });
   const closeMenu = () => {
+    menuOpen = false;
     menuBtn?.setAttribute("aria-expanded", "false");
     nav?.classList.remove("open");
     document.body.style.overflow = "";
+    syncHeader();
   };
   $$(".nav a").forEach((a) => a.addEventListener("click", closeMenu));
 

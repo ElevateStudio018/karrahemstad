@@ -14,20 +14,29 @@
 <meta property="og:url" content="https://karrahemstad.se/404.html">
 <meta property="og:image" content="https://karrahemstad.se/assets/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f5f3ee">
+<meta name="theme-color" content="#0b1f3a">
 <link rel="icon" href="/assets/img/icon-32.png" sizes="32x32">
 <link rel="icon" href="/assets/img/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/assets/img/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css?v=20261027">
 <script>document.documentElement.classList.add("js")</script>
 <script src="/assets/js/main.js?v=20261027" defer></script>
 
-</head><body>
+</head><body class="no-overlay">
 <a class="skip" href="#main">Hoppa till innehållet</a>
 <header class="site-header">
+  <div class="topbar">
+    <div class="wrap topbar-row">
+      <span><svg class="i i-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Hisingen, Kärra och Göteborg med omnejd</span>
+      <span class="topbar-right">
+        <a href="mailto:info@karrahemstad.se"><svg class="i i-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg> info@karrahemstad.se</a>
+        <a href="tel:+4631278998"><svg class="i i-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3l1.6 4-2 1.3a10 10 0 0 0 5.1 5.1L15 11.4l4 1.6-.5 2.4A2 2 0 0 1 16.6 17 13.6 13.6 0 0 1 3 3.4 2 2 0 0 1 4.6 1.5" transform="translate(1.5 2.5)"/></svg> 031-27 89 98</a>
+      </span>
+    </div>
+  </div>
   <div class="wrap header-row">
     <a class="logo" href="/" aria-label="Kärra Hemstäd – startsidan">
       <img src="/assets/img/logo.png" alt="Kärra Hemstäd" width="180" height="40">
@@ -36,7 +45,10 @@
       <ul class="nav-list">
         <li class="has-sub">
           <button class="nav-sub-toggle" aria-expanded="false" aria-controls="sub-services">Tjänster <svg class="i i-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-          <ul class="sub" id="sub-services"><li><a href="/hemstadning/"><span>Hemstädning</span><small>275 kr/h</small></a></li><li><a href="/flyttstadning/"><span>Flyttstädning</span><small>297 kr/h</small></a></li><li><a href="/storstadning/"><span>Storstädning</span><small>297 kr/h</small></a></li><li><a href="/fonsterputsning/"><span>Fönsterputsning</span><small>70 kr/fönster</small></a></li><li><a href="/dodsbostadning/"><span>Dödsbostädning</span><small>270 kr/h</small></a></li><li><a href="/kontorstadning/"><span>Kontorstädning</span><small>330 kr/h</small></a></li><li><a href="/trappstadning/"><span>Trappstädning</span><small>280 kr/h</small></a></li><li><a href="/industristadning/"><span>Industristädning</span><small>280 kr/h</small></a></li></ul>
+          <div class="sub" id="sub-services">
+            <div class="sub-col"><p class="sub-h">Privat</p><ul><li><a href="/hemstadning/"><span>Hemstädning</span><small>275 kr/h</small></a></li><li><a href="/flyttstadning/"><span>Flyttstädning</span><small>297 kr/h</small></a></li><li><a href="/storstadning/"><span>Storstädning</span><small>297 kr/h</small></a></li><li><a href="/fonsterputsning/"><span>Fönsterputsning</span><small>70 kr/fönster</small></a></li><li><a href="/dodsbostadning/"><span>Dödsbostädning</span><small>270 kr/h</small></a></li></ul></div>
+            <div class="sub-col"><p class="sub-h">Företag &amp; föreningar</p><ul><li><a href="/kontorstadning/"><span>Kontorstädning</span><small>330 kr/h</small></a></li><li><a href="/trappstadning/"><span>Trappstädning</span><small>280 kr/h</small></a></li><li><a href="/industristadning/"><span>Industristädning</span><small>280 kr/h</small></a></li></ul></div>
+          </div>
         </li>
         <li><a href="/#flyttjanst">Flytthjälp</a></li>
         <li><a href="/#priser">Priser</a></li>
@@ -45,61 +57,69 @@
       </ul>
     </nav>
     <div class="header-cta">
-      <a class="phone-link" href="tel:+4631278998"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3l1.6 4-2 1.3a10 10 0 0 0 5.1 5.1L15 11.4l4 1.6-.5 2.4A2 2 0 0 1 16.6 17 13.6 13.6 0 0 1 3 3.4 2 2 0 0 1 4.6 1.5" transform="translate(1.5 2.5)"/></svg><span>031-27 89 98</span></a>
-      <a class="btn btn-primary btn-sm" href="#offert" data-quote>Få offert</a>
+      <a class="phone-link" href="tel:+4631278998" aria-label="Ring 031-27 89 98"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3l1.6 4-2 1.3a10 10 0 0 0 5.1 5.1L15 11.4l4 1.6-.5 2.4A2 2 0 0 1 16.6 17 13.6 13.6 0 0 1 3 3.4 2 2 0 0 1 4.6 1.5" transform="translate(1.5 2.5)"/></svg></a>
+      <a class="btn btn-primary btn-sm" href="#offert" data-quote>Begär offert</a>
       <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Meny"><svg class="i i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="i i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
   </div>
 </header>
 <main id="main">
-<section class="page-hero page-hero-text">
+<section class="section plain-hero">
   <div class="wrap">
+    <p class="kicker">404</p>
     <h1>Sidan finns inte.</h1>
     <p class="lede">Den kan ha flyttats när vi byggde om sajten. Börja på <a href="/">startsidan</a> eller ring <a href="tel:+4631278998">031-27 89 98</a>.</p>
   </div>
 </section></main>
-<footer class="site-footer">
-  <div class="wrap footer-top">
-    <div class="footer-cta">
-      <p class="h2">Frågor? Ring oss.</p>
-      <a class="footer-phone" href="tel:+4631278998">031-27 89 98</a>
-      <p class="muted">Eller mejla <a href="mailto:info@karrahemstad.se">info@karrahemstad.se</a></p>
+<section class="cta-band">
+  <div class="wrap cta-band-row">
+    <div>
+      <p class="cta-band-title">Redo att slippa städningen?</p>
+      <p>Få en kostnadsfri offert – eller ring oss direkt.</p>
     </div>
-    <div class="footer-cols">
-      <div>
-        <p class="footer-h">Tjänster</p>
-        <ul><li><a href="/hemstadning/">Hemstädning</a></li><li><a href="/flyttstadning/">Flyttstädning</a></li><li><a href="/storstadning/">Storstädning</a></li><li><a href="/fonsterputsning/">Fönsterputsning</a></li><li><a href="/dodsbostadning/">Dödsbostädning</a></li><li><a href="/kontorstadning/">Kontorstädning</a></li><li><a href="/trappstadning/">Trappstädning</a></li><li><a href="/industristadning/">Industristädning</a></li></ul>
-      </div>
-      <div>
-        <p class="footer-h">Företaget</p>
-        <ul>
-          <li><a href="/om-oss/">Om oss</a></li>
-          <li><a href="/kontakta-oss/">Kontakt</a></li>
-          <li><a href="/#priser">Priser och RUT</a></li>
-          <li><a href="/#fragor">Vanliga frågor</a></li>
-          <li><a href="/assets/docs/nyckelkvittens.pdf">Nyckelkvittens (PDF)</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="footer-h">Besöksadress</p>
-        <address>
-          Kärra Hemstäd AB<br>Litteraturgatan 146<br>422 63 Hisings Backa
-        </address>
-        <p class="social">
-          <a href="https://www.facebook.com/karrahemstad/" rel="noopener">Facebook</a>
-          <a href="https://www.instagram.com/karrahemstad/" rel="noopener">Instagram</a>
-        </p>
-      </div>
+    <div class="cta-band-actions">
+      <a class="btn btn-primary btn-lg" href="#offert" data-quote>Begär offert <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-outline-light btn-lg" href="tel:+4631278998"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3l1.6 4-2 1.3a10 10 0 0 0 5.1 5.1L15 11.4l4 1.6-.5 2.4A2 2 0 0 1 16.6 17 13.6 13.6 0 0 1 3 3.4 2 2 0 0 1 4.6 1.5" transform="translate(1.5 2.5)"/></svg> 031-27 89 98</a>
     </div>
   </div>
-  <div class="wrap footer-bottom">
-    <span>© 2026 Kärra Hemstäd AB</span>
-    <span>Städning på Hisingen, Kärra och Göteborg med omnejd</span>
+</section>
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <img src="/assets/img/logo.png" alt="Kärra Hemstäd" width="180" height="40">
+      <p>Det lokala städbolaget i Kärra. Städning för hem, företag och bostadsrättsföreningar på Hisingen, Kärra och Göteborg med omnejd.</p>
+      <p class="social">
+        <a href="https://www.facebook.com/karrahemstad/" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/karrahemstad/" rel="noopener">Instagram</a>
+      </p>
+    </div>
+    <div>
+      <p class="footer-h">Privat</p>
+      <ul><li><a href="/hemstadning/">Hemstädning</a></li><li><a href="/flyttstadning/">Flyttstädning</a></li><li><a href="/storstadning/">Storstädning</a></li><li><a href="/fonsterputsning/">Fönsterputsning</a></li><li><a href="/dodsbostadning/">Dödsbostädning</a></li></ul>
+    </div>
+    <div>
+      <p class="footer-h">Företag</p>
+      <ul><li><a href="/kontorstadning/">Kontorstädning</a></li><li><a href="/trappstadning/">Trappstädning</a></li><li><a href="/industristadning/">Industristädning</a></li><li><a href="/#flyttjanst">Flytthjälp</a></li></ul>
+    </div>
+    <div>
+      <p class="footer-h">Kontakt</p>
+      <ul class="footer-contact">
+        <li><a href="tel:+4631278998"><svg class="i i-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3l1.6 4-2 1.3a10 10 0 0 0 5.1 5.1L15 11.4l4 1.6-.5 2.4A2 2 0 0 1 16.6 17 13.6 13.6 0 0 1 3 3.4 2 2 0 0 1 4.6 1.5" transform="translate(1.5 2.5)"/></svg>031-27 89 98</a></li>
+        <li><a href="mailto:info@karrahemstad.se"><svg class="i i-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>info@karrahemstad.se</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Litteraturgatan+146,+422+63+Hisings+Backa" rel="noopener"><svg class="i i-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Litteraturgatan 146<br>422 63 Hisings Backa</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap footer-bottom-row">
+      <span>© 2026 Kärra Hemstäd AB</span>
+      <span class="footer-links"><a href="/om-oss/">Om oss</a><a href="/#fragor">Vanliga frågor</a><a href="/assets/docs/nyckelkvittens.pdf">Nyckelkvittens (PDF)</a></span>
+    </div>
   </div>
 </footer>
 <div class="mobile-bar" aria-label="Snabbkontakt">
   <a class="btn btn-ghost" href="tel:+4631278998"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5 9 3l1.6 4-2 1.3a10 10 0 0 0 5.1 5.1L15 11.4l4 1.6-.5 2.4A2 2 0 0 1 16.6 17 13.6 13.6 0 0 1 3 3.4 2 2 0 0 1 4.6 1.5" transform="translate(1.5 2.5)"/></svg> Ring</a>
-  <a class="btn btn-primary" href="#offert" data-quote>Få offert</a>
+  <a class="btn btn-primary" href="#offert" data-quote>Begär offert</a>
 </div>
 </body>
 </html>
